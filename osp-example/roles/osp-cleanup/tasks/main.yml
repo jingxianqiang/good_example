@@ -1,0 +1,15 @@
+  - name: delete a server instance
+    os_server:
+      cloud: ospcloud
+      state: absent
+      name: "{{ instance_name }}"
+      meta: "group={{ group }},deployment_name={{ deployment }}"
+      security_groups: "{{ security_group_name }}"
+      key_name: ansible_ssh
+      image: rhel-guest
+      network: ext_network
+      nics:
+        - net-name: int_network
+      wait: true
+      timeout: 180
+

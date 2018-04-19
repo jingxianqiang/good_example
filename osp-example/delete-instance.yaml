@@ -1,6 +1,7 @@
 ---  
-  - name: delete a server instance
-    os_server:
+- hosts: jumpbox
+  tasks:
+  - os_server:
       cloud: ospcloud
       state: absent
       name: "{{ instance_name }}"

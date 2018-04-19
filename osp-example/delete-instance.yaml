@@ -1,3 +1,4 @@
+---  
   - name: delete a server instance
     os_server:
       cloud: ospcloud
